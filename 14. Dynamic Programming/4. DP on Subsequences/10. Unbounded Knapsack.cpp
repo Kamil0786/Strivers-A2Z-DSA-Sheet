@@ -48,6 +48,7 @@ int fmemo(int i, int val[], int wt[], int W, vector<vector<int>>& dp){
     if(dp[i][W] != -1) return dp[i][W];
     
     int take = INT_MIN;
+   // IMP: Here i is not decremented:
     if(W >= wt[i]) take = val[i] + fmemo(i, val, wt, W - wt[i], dp);
     int notake = fmemo(i - 1, val, wt, W, dp);
     
