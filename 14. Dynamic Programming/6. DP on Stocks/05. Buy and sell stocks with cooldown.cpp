@@ -35,6 +35,7 @@ int fmemo(int i, int hold, vector<int>& prices, vector<vector<int>>& dp){
 
     if(hold){
         // sell 
+        // here is the diff i+2
         int a = prices[i] + fmemo(i + 2, 0, prices, dp);
         // not sell
         int b = fmemo(i + 1, 1, prices, dp);
