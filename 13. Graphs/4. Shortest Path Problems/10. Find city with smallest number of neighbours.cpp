@@ -38,7 +38,7 @@ int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
         adj[e[0]].push_back({e[1], e[2]});
         adj[e[1]].push_back({e[0], e[2]});
     }
-
+// this is similar to INT_MAX
     vector<int> dis(n, numeric_limits<int>::max());
     unordered_map<int, int> mp;
 
